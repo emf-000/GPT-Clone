@@ -1,0 +1,70 @@
+/* Message bubbles */
+.userDiv, .gptDiv {
+  display: flex;
+  justify-content: center;      /* center messages horizontally */
+  margin-bottom: 1rem;
+}
+
+.message, .userMessage, .gptMessage {
+  max-width: 70%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+  animation: fadeIn 0.2s ease-in;
+  text-align: left;             /* optional: keep left-aligned text */
+}
+
+/* User messages (right) */
+.message.user, .userMessage {
+  background: linear-gradient(135deg, #3b3b3b, #2c2c2c);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+.message.user:hover, .userMessage:hover {
+  background: linear-gradient(135deg, #4a4a4a, #383838);
+}
+
+/* GPT messages (left) */
+.message.bot, .gptMessage {
+  background: linear-gradient(135deg, #272727, #1e1e1e);
+  color: #f0f0f0;
+  border-bottom-left-radius: 4px;
+}
+.message.bot:hover, .gptMessage:hover {
+  background: linear-gradient(135deg, #323232, #252525);
+}
+
+/* Highlight code blocks */
+.hljs {
+  border-radius: 14px !important;
+  background-color: #1e1e1e !important;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  word-break: break-word;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .message, .userMessage, .gptMessage {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .message, .userMessage, .gptMessage {
+    max-width: 95%;
+    font-size: 0.85rem;
+  }
+}
