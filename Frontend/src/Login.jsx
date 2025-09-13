@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Auth.css";
 
@@ -72,8 +72,9 @@ export default function Login() {
         </button>
       </form>
       <p className="switch-auth">
-        Don't have an account? <a href="/register">Register</a>
+        Don't have an account? <Link to="/register">Register</Link>
       </p>
     </div>
   );
 }
+
