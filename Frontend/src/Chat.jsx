@@ -44,7 +44,7 @@ function Chat() {
                     height: '60vh',
                     textAlign: 'center'
                 }}>
-                    <h1>SigmaGPT</h1>
+                    <h1>GPT-Clone</h1>
                     <p>How can I help you today?</p>
                 </div>
             )}
@@ -77,5 +77,6 @@ function Chat() {
         </div>
     );
 }
+
 
 export default Chat;
